@@ -31,8 +31,57 @@ with open('liteprice.csv', 'wb') as myfile:
 		dt=datetime.datetime.utcnow().strftime("%Y-%m-%d-%H-%M-%S");
 		#print dt
 		list.append(dt)
-		wr = csv.writer(myfile, quoting=csv.QUOTE_ALL);
-		wr.writerow(list);
+		
 		#2018-02-20-13-13-12
 		#Sat Oct 04 13:00:36  2014
 		#print target.text.strip()
+		text=soup.find("td",class_="coin-high").text.strip()
+		l=len(text)
+		n=""
+		for i in range(l):
+			c=text[i]
+			if(c=='1' or c=='2' or c=='3' or c=='4' or c=='5' or c=='6' or c=='7' or c=='8' or c=='9' or c=='0' or c=='.'):
+				n=n+c
+		list.append(n);
+
+		text=soup.find("td",class_="coin-low").text.strip()
+		l=len(text)
+		n=""
+		for i in range(l):
+			c=text[i]
+			if(c=='1' or c=='2' or c=='3' or c=='4' or c=='5' or c=='6' or c=='7' or c=='8' or c=='9' or c=='0' or c=='.'):
+				n=n+c
+		list.append(n);
+
+		text=soup.find("td",class_="coin-volume").text.strip()
+		l=len(text)
+		n=""
+		for i in range(l):
+			c=text[i]
+			if(c=='1' or c=='2' or c=='3' or c=='4' or c=='5' or c=='6' or c=='7' or c=='8' or c=='9' or c=='0' or c=='.'):
+				n=n+c
+		list.append(n);
+
+		text=soup.find("td",class_="coin-supply").text.strip()
+		l=len(text)
+		n=""
+		for i in range(l):
+			c=text[i]
+			if(c=='1' or c=='2' or c=='3' or c=='4' or c=='5' or c=='6' or c=='7' or c=='8' or c=='9' or c=='0' or c=='.'):
+				n=n+c
+		list.append(n);
+
+		text=soup.find("td",class_="coin-marketcap").text.strip()
+		l=len(text)
+		n=""
+		for i in range(l):
+			c=text[i]
+			if(c=='1' or c=='2' or c=='3' or c=='4' or c=='5' or c=='6' or c=='7' or c=='8' or c=='9' or c=='0' or c=='.'):
+				n=n+c
+		list.append(n);
+		wr = csv.writer(myfile, quoting=csv.QUOTE_ALL);
+		wr.writerow(list);
+
+'''FORMAT
+	price;	24-high;	24-low;	24-Volume;	#Coins(Millions);	Market_Cap(Billions)
+'''
