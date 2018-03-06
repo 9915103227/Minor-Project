@@ -83,5 +83,5 @@ with open('bitcoin.csv', 'wb') as myfile:
 		wr.writerow(list);
 
 '''FORMAT
-	price;	24-high;	24-low;	24-Volume;	#Coins(Millions);	Market_Cap(Billions)
+	price;	24-high;	24-low;	24-Volume;	#Coins;	Market_Cap
 '''
