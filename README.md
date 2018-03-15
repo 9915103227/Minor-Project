@@ -1,6 +1,11 @@
-# Minor-Project
-
-Bhailog lets do minor project over GitHub. Everyone can see other's code, and will be able to edit.
-djraqrjaiehjrakfjkl
-sdfsdfsdfsdfsdgdddddddddddddddddddddddddddddd
-Historyadjfak jdkl change everyhtindk 
+finalData.csv format
+polarity
+protected
+verified
+followers_count
+friends_count
+favourites_count
+statuses_count
+retweet_count
+timeDifference
+Avg_Price_for_the_2_hour_block
